@@ -1,0 +1,38 @@
+group 'com.craft.gradle.scala'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+version = '1.0'
+
+sourceCompatibility = 1.5
+
+repositories {
+    /*mavenLocal artifactUrls:["file://D:\\reposity"]*/
+    mavenCentral artifactUrls:["file://D:\\reposity"]
+    mavenLocal()
+    /*maven { url "http://10.154.250.38:8081/nexus/content/groups/public" }*/
+    /*mavenCentral()*/
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.1.0'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.0.5.RELEASE'
+    compile ('com.google.guava:guava:19.0')
+    compile ('com.alibaba:fastjson:1.2.7')
+    compile ('org.apache.kafka:kafka-clients:0.9.0.0')
+    compile ('ch.qos.logback:logback-classic:1.0.13')
+    compile ('ch.qos.logback:logback-core:1.0.13')
+    compile ('org.slf4j:slf4j-api:1.7.5')
+}
+
+compileJava {
+    options.fork(executable: "C:\\Program Files\\Java\\jdk1.8.0_92\\bin\\javac")
+}
+
+repositories {
+    mavenCentral()
+}
+
