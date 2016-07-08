@@ -8,6 +8,26 @@ version = '1.0'
 
 sourceCompatibility = 1.5
 
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/main/scala', 'src/main/java']
+        }
+        java {
+            srcDirs = []
+        }
+    }
+
+    test {
+        scala {
+            srcDirs = ['src/test/scala', 'src/test/java']
+        }
+        java {
+            srcDirs = []
+        }
+    }
+}
+
 repositories {
     /*mavenLocal artifactUrls:["file://D:\\reposity"]*/
     mavenCentral artifactUrls:["file://D:\\reposity"]
@@ -26,6 +46,9 @@ dependencies {
     compile ('ch.qos.logback:logback-classic:1.0.13')
     compile ('ch.qos.logback:logback-core:1.0.13')
     compile ('org.slf4j:slf4j-api:1.7.5')
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile "org.scala-lang:scala-compiler:2.11.8"
+    compile "org.scala-lang:scala-reflect:2.11.8"
 }
 
 compileJava {
