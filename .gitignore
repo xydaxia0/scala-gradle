@@ -16,3 +16,7 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 .idea/
+build/
+src/main/java/
+src/main/resources/
+src/test/
